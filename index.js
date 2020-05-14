@@ -107,7 +107,7 @@ console.log(temperatureInF(24, "C")) ;
  * }
 */
 function makePersonObject(id, name, email) {
-  let person = {
+  var person = {
     id: id,
     name: name,
     email: email
@@ -129,9 +129,11 @@ console.log(makePersonObject(5, "leia", "leia@leia.com"));
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(object) {
+  name = object.name;
+  return "Hello, my name is " + name;
 }
+console.log(getName(makePersonObject(5, "leia", "leia@leia.com")));
 
 
 /**
