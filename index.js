@@ -324,9 +324,17 @@ console.log(getCarInfoById(inventory, 1));
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(inventory, year) {
+  var olderCars = [];
+  for(let i = 0; i<inventory.length; i++){
+    if(inventory[i].car_year <= year){
+      olderCars.push(inventory[i]);
+    
+    }
+  }
+  return olderCars;
 }
+console.log(getOlderCars(inventory, 2000));
 
 /**
  * ### Challenge `getGermanCars`
