@@ -12,8 +12,8 @@
  *
  * NOTE: This example has been completed for you.
 */
-function addNumbers(num1, num2) {
-  return num1 + num2;
+addNumbers = (num1, num2) => {
+  num1 + num2;
 }
 
 // ⭐️ Example Challenge end ⭐️
@@ -157,7 +157,7 @@ function appleIndex(fruits) {
     if(fruits[i] === 'apple'){
       console.log([i]);
     }
-   }
+ }
 }
 console.log(appleIndex([ 'orange', 'grape', 'apple', 'banana', 'mango' ]))
 /**
@@ -192,8 +192,8 @@ console.log(isItAnApple([ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango
 
 
 
-/*
-// ⭐️ Example Test Data ⭐️
+
+
 
 var inventory = [
   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
@@ -210,12 +210,12 @@ var inventory = [
   { id: 12, car_make: "Lotus", car_model: "Esprit", car_year: 2004 },
   { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
-  /// ... Truncated
+  // / ... Truncated
 ]
-*/
+
 
 // Data from file 
-var data = require('data/inventory.js'); 
+// var data = require('data./inventory.js');
 
 /**
   * ### Example Array Challenge:
@@ -230,7 +230,7 @@ function get3rdCar(inventory) {
   const the3rd = inventory[2];
   return `The is a ${the3rd.car_make} ${the3rd.car_model}`
 }
-
+console.log(get3rdCar(inventory))
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -249,8 +249,10 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  // const the3rd = inventory[index];
+  return `The is a ${inventory[index].car_make} ${inventory[index].car_model}`
 }
+console.log(getCarInfoByIndex(inventory, 0))
 
 /**
  * ### Challenge `getLastCarInfo`
