@@ -151,10 +151,18 @@ console.log(getName(makePersonObject(5, "leia", "leia@leia.com")));
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(fruits) {
+  for(let i = 0; i<fruits.length; i++){
+    // console.log([i]);
+    if(fruits[i] === 'apple'){
+      console.log([i]);
+    }
+    // else{
+    //   return "meh";
+    // }
+  }
 }
-
+console.log(appleIndex([ 'orange', 'grape', 'apple', 'banana', 'mango' ]))
 /**
  * ### Challenge `isItAnApple`
  * 
