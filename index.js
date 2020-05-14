@@ -279,10 +279,14 @@ console.log(getLastCarInfo(inventory))
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+carYears = [];
+function getModelYears(inventory) {
+  for(let i = 0; i<inventory.length; i++){
+    carYears.push(inventory[i].car_year);
+  }
+  return carYears;
 }
-
+console.log(getModelYears(inventory));
 /**
  * ### Challenge `getCarInfoById`
  *  * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
@@ -297,9 +301,14 @@ function getModelYears(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, Id) {
+  for(let i = 0; i<inventory.length; i++){
+    if(inventory[i].id === Id){
+      return `The is a ${inventory[i].car_make} ${inventory[i].car_model}`
+    }
+  }  
 }
+console.log(getCarInfoById(inventory, 1));
 
 /**
  * ### Challenge `getOlderCars`
