@@ -36,9 +36,10 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
-  /* code here */
-}
+function sayGoodbye(name) {
+  return "Goodbye, " + name + ". Have a great day."
+};
+console.log(sayGoodbye("Julian")); 
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -181,7 +182,7 @@ var inventory = [
 */
 
 // Data from file 
-var data = require('data./inventory.js'); 
+var data = require('data/inventory.js'); 
 
 /**
   * ### Example Array Challenge:
